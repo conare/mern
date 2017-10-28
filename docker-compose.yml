@@ -4,8 +4,6 @@
     container_name: react
     ports:
       - "4000:4000"
-    volumes:
-      - ~/repo/clients/blue:/app
     links:
       - database
       
