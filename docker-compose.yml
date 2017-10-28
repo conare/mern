@@ -1,0 +1,18 @@
+  react: 
+    build: react
+    dockerfile: Dockerfile
+    container_name: react
+    ports:
+      - "4000:4000"
+    volumes:
+      - ~/repo/clients/blue:/app
+    links:
+      - database
+      
+  database:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ~/mongo:/data/db
